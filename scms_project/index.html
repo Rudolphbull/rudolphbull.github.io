@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCMS Election Form </title>
-    <link rel="stylesheet" href="./style01.css">
+    <link rel="stylesheet" href="style01.css">
     <link rel="icon" href="favicon (5).ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,14 +18,14 @@
     <h1>SCMS OSA ELECTIONS 2022</h1>
     <!---====<div class="error"></div>==========------>
      <div class="form">
-        <form action="connect.php" method="post" name="emailElectionResults">
+        <form name="myForm" action="https://formspree.io/f/xkneonkr" method="post" onsubmit="sendEmail()" reset(); return false;>
                 <h2>Nominate Your Candidate Below:</h2>
                 <!-- <p>Please note, you are required to fill in three candidates for each Position(s).</p> -->
                 <!--===========For President=========== -->
                 <!-- <div class="president"> -->
                <ol>
                     
-            <li><label for="votersCredentials"> Voter's Credentials:
+            <li><label for="President"> Voter's Credentials:
                 </label>
                 <br><br>
                 <div class="votersCredentials">                               
@@ -36,7 +36,7 @@
 
                 <br><br>
 
-                <li><label for="votersEmail"> Voter's Email:
+                <li><label for="President"> Voter's Email:
                 </label>
                 <br><br>
                 <div class="votersEmail">                                
@@ -224,15 +224,7 @@
                  </li>
                 
                  </ol>
-                 <div class="submit">
-                    <input class="form-control button" id="submit" type="submit" name="submit" value="Submit">
-                    <?Php if(!empty($message)) { ?>
-                    <div class="success">
-                        <strong><?php echo $message; ?></strong>
-                    </div>
-                    <?php } ?>
-
-                 </div>
+                 <input class="form-control button" id="submit" type="submit" name="submit" value="Submit">
                </form>
 
     </div>
@@ -250,8 +242,8 @@
 
 
 
-<!-- 
+
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="./script5.js"></script> -->
+    <script src="./script5.js"></script>
 </body>
 </html>
