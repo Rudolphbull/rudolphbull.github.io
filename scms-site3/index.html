@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCMS Election Form </title>
-    <link rel="stylesheet" href="style01.css">
+    <link rel="stylesheet" href="./style01.css">
     <link rel="icon" href="favicon (5).ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,29 +18,29 @@
     <h1>SCMS OSA ELECTIONS 2022</h1>
     <!---====<div class="error"></div>==========------>
      <div class="form">
-        <form name="myForm" action="https://formspree.io/f/xkneonkr" method="post" onsubmit="sendEmail()" reset(); return false;>
-                <h2>Nominate Your Candidate Below:</h2>
+        <form action="https://sheetdb.io/api/v1/tbn4p3ciymjnr" method="post" id="sheetdb-form">
+                <h2>Cast Your vote for your Candidate Below:</h2>
                 <!-- <p>Please note, you are required to fill in three candidates for each Position(s).</p> -->
                 <!--===========For President=========== -->
                 <!-- <div class="president"> -->
                <ol>
                     
-            <li><label for="President"> Voter's Credentials:
+            <li><label for="votersCredentials"> Voter's Credentials:
                 </label>
                 <br><br>
                 <div class="votersCredentials">                               
-                <input class="inputText" id="votersFirstName" placeholder="First Name(voters):" name="votersFirstName" type="text" required>
-                <input class="inputText" id="votersLastName" placeholder="Last Name(voters):"name="votersLastName" type="text" required>
+                <input class="inputText" placeholder="First Name(voters):" name="data[votersFirstName]" type="text" required>
+                <input class="inputText" placeholder="Last Name(voters):"name="data[votersLastName]" type="text" required>
                 </div>
            </li>
 
                 <br><br>
 
-                <li><label for="President"> Voter's Email:
+                <li><label for="votersEmail"> Voter's Email:
                 </label>
                 <br><br>
                 <div class="votersEmail">                                
-                <input class="inputText" id="votersEmail" placeholder="Email(Voters):"name="votersEmail" type="email" required>
+                <input class="inputText" value="Email(Voters):"name="data[votersEmail]" type="email" required>
                </div>
            </li>
 
@@ -50,17 +50,23 @@
                 </label>
                 <br><br>
                 <div class="phone">                             
-                <input class="inputText" id="phone" placeholder="2349063774018"name="phone" type="tel" required>
+                <input class="inputText" value="2349063774018"name="data[phone]" type="tel" required>
                 </div>
            </li>
 
                 <br><br>
 
-                   <li><label for="President"> Who will you like to nominate for the post of President?
+                   <li><label for="President">Select Who you will like to vote for the post of President?
                         </label>   
                         <br><br>
                         <div class="president">                             
-                        <input class="inputText" id="myPresident" placeholder="President:"name="myPresident" type="text" required>
+                        <select name="data[myPresident]" >
+                            <option value="NIL">NIL</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                         <!-- <input class="inputText" id="presidentLastName1" placeholder="Last Name1(President):"name="presidentLastName1" type="text" required> 
                         <br><br>
 
@@ -77,10 +83,16 @@
                         <!--===========For Vice President=========== -->
 
                    
-                   <li> <label for="vicePresident">Who will you like to nominate for the post of Vice President?</label>
+                   <li> <label for="vicePresident">Select Who you will like to vote for the post of Vice President?</label>
                     <br><br>
                     <div class="vicePresident">
-                        <input class="inputText" id="myVicePresident" placeholder="Vice President: " name="myVicePresident" type="text" required>
+                        <select name="data[myVicePresident]" >
+                            <option value="NIL">NIL</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                         <!-- <input class="inputText" id="vpLastName1" placeholder="Last Name1(Vice President): " name="vpLastName1" type="text" required> 
                         <br><br>
                         <input class="inputText" id="myVicePresident2" placeholder="Vice President2: " name="myVicePresident2" type="text" required>
@@ -96,10 +108,16 @@
                          <!--===========For Secretary=========== -->
 
                 
-                  <li> <label for="secretary">Who will you like to nominate for Secretary?</label>
+                  <li> <label for="secretary">Select Who you will like to vote for Secretary?</label>
                     <br><br>
                     <div class="secretary">
-                        <input class="inputText" id="mySecretary" placeholder="Secretary:"name="mySecretary" type="text" required>
+                        <select name="data[mySecretary]" >
+                            <option value="NIL">NIL</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                         <!-- <input class="inputText"  id="secretaryLastName1" placeholder="Last Name1(Secretary):"name="secretaryLastName1" type="text" required> 
                         <br><br>
                          <input class="inputText" id="mySecretary2" placeholder="Secretary2:"name="mySecretary2" type="text" required>
@@ -114,10 +132,16 @@
                         <!--===========For Welfare=========== -->
 
                 
-                  <li> <label for="welfare">Who will you like to nominate for the post of Welfare?</label>
+                  <li> <label for="welfare">Select Who you will like to vote for the post of Welfare?</label>
                     <br><br>
                     <div class="welfare">
-                     <input class="inputText" id="myWelfare" placeholder="Welfare:" name="myWelfare" type="text" required>
+                        <select name="data[myWelfare]">
+                            <option value="NIL">NIL</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                     <!-- <input class="inputText" id="welfareLastName1" placeholder="Last Name(Welfare)1:" name="welfareLastName1" type="text" required>
                     <br><br>
                     <input class="inputText" id="myWelfare2" placeholder="Welfare2:" name="myWelfare2" type="text" required>
@@ -132,10 +156,16 @@
                         <!--===========For Deputy Welfare=========== -->
 
                 
-                  <li> <label for="deputyWelfare">Who will you like to nominate for the post of Deputy Welfare?</label>
+                  <li> <label for="deputyWelfare">Select Who you will like to vote for the post of Deputy Welfare?</label>
                     <br><br>
-                    <div class="Welfare">
-                     <input class="inputText" id="myDeputyWelfare" placeholder="Deputy Welfare:" name="myDeputyWelfare" type="text" require>
+                    <div class="deputyWelfare">
+                        <select name="data[myDeputyWelfare]">
+                            <option value="NIL">NIL</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                      <!-- <input class="inputText"  id="deputyWelfareLastName1" placeholder="Last Name(Deputy Welfare)1:" name="deputyWelfareLastName1" type="text" required>
                      <br><br>
                       <input class="inputText" id="myDeputyWelfare2" placeholder="Deputy Welfare2:" name="myDeputyWelfare2" type="text" require>
@@ -150,10 +180,16 @@
                         <!--===========For Treasurer=========== -->
 
                 
-                 <li> <label for="treasurer">Who will you like to nominate for the post of Treasurer?</label>
+                 <li> <label for="treasurer">Select Who you will like to vote for the post of Treasurer?</label>
                     <br><br>
                     <div class="Treasurer">
-                   <input class="inputText"  id="myTreasurer" placeholder="Treasurer:" name="myTreasurer" type="text" required>
+                        <select name="data[myTreasurer]">
+                            <option value="NIL">NIL</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                      <!-- <input class="inputText" id="treasurerLastName1" placeholder="Last Name(Treasurer)1:" name="treasurerLastName1" type="text" required>  
                      <br><br>
                      <input class="inputText"  id="myTreasurer2" placeholder="Treasurer2:" name="myTreasurer2" type="text" required>
@@ -169,11 +205,17 @@
                         <!--===========For Financial Secretary=========== -->
 
                         
-                  <li> <label for="financialSecretary">Who will you like to nominate for the post of Financial Secretary?
+                  <li> <label for="financialSecretary">Select Who you will like to vote for the post of Financial Secretary?
                      </label>
                      <br><br>
                      <div class="financialSecretary">
-                     <input class="inputText"  id="myFinancialSecretary" placeholder="Financial Secretary:" name="myFinancialSecretary" type="text" required>
+                        <select name="data[myFinancialSecretary]">
+                            <option value="NIL">NIL</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                      <!-- <input class="inputText"  id="financialSecretaryLastName1" placeholder="Last Name(Financial Secretary)1:" 
                      name="financialSecretaryLastName1" type="text" required> 
                      <br><br>
@@ -192,10 +234,16 @@
                         <!--===========For Deputy Financial Secretary=========== -->
 
                 
-                 <li> <label for="deputyFinSec">Who will you nominate for the post of Deputy Financial Secretary? </label>
+                 <li> <label for="deputyFinSec">Select Who you will like to vote for the post of Deputy Financial Secretary? </label>
                     <br><br>
                     <div class="deputyFinancialSecretary">
-                     <input class="inputText" id="myDeputyFinancialSecretary" placeholder="DeputyFinancialSecretary:" name="myDeputyFinancialSecretary" type="text" required>
+                        <select name="data[myDeputyFinancialSecretary]">
+                            <option value="NIL">NIL</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
                      <!-- <input class="inputText" id="deputyFinancialSecretaryLastname1" placeholder="Last Name(DeputyFinSec)1:" name="deputyFinancialSecretaryLastname1" type="text" required>
                      <br><br>
                      <input class="inputText" id="myDeputyFinancialSecretary2" placeholder="DeputyFinancialSecretary2:" name="myDeputyFinancialSecretary2" type="text" required>
@@ -209,10 +257,17 @@
 
                         <!--===========For Deputy Social Secretary===========-->
 
-                 <li> <label for="socialSecretary">Who will you like to nominate for the post of Social Secretary?</label>
+                 <li> <label for="socialSecretary">Select Who you will like to vote for the post of Social Secretary?</label>
                     <br><br>
                     <div class="socialSecretary">
-                     <input class="inputText"  id="mySocialSecretary" placeholder="Social Secretary:" name="mySocialSecretary" type="text" required>
+                        <select name="data[mySocialSecretary]" id="data[mySocialSecretary]" >
+                            <option value="NIL">NIL</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                     
                      <!-- <input class="inputText" id="socialSecretaryLastname1" placeholder="Last Name(Social Secretary)1:" name="socialSecretaryLastname1" type="text" required> 
                      <br><br>
                      <input class="inputText"  id="mySocialSecretary2" placeholder="Social Secretary2:" name="mySocialSecretary2" type="text" required>
@@ -224,7 +279,12 @@
                  </li>
                 
                  </ol>
-                 <input class="form-control button" id="submit" type="submit" name="submit" value="Submit">
+                 <div class="submit">
+                    <input class="form-control button" id="submit" type="submit" name="submit" value="Submit">
+                    </div>
+                
+
+                 </div>
                </form>
 
     </div>
@@ -242,8 +302,8 @@
 
 
 
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="./script5.js"></script>
+<!-- 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>-->
+    <script src="./script6.js"></script> 
 </body>
 </html>
