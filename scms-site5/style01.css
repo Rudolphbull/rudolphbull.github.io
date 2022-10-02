@@ -10,7 +10,7 @@
 
 body {
     text-align: center;
-    background-color: #0084ff;
+    background-color: darkblue;
     margin: auto;
     align-items: center;
     justify-content: center;
@@ -54,7 +54,7 @@ label{
     
 }
 
-/* =========Aligning input text for options 2 and 3 of the candidates======== */
+/* =========Aligning input text for options(#0084ff) 2 and 3 of the candidates======== */
 
 .input#presidentLastName2   {
     margin-left: 900px;
@@ -90,12 +90,14 @@ label{
 #submit:hover{
     background-color: green;
     color: snow;
+    cursor: pointer;
     
 }
 
 #reset:hover{
     background-color: green;
     color: snow;
+
     
 }
 
@@ -104,12 +106,15 @@ label{
     body {
         display: block;
         text-align: center;
-        background-color: #0084ff;
+        background-color: darkblue;
         margin: auto;
         align-items: center;
         justify-content: center;
         text-align: center;
+    }
 
+    .position-tester img{
+        margin: auto;
     }
 
     #submit {
@@ -156,7 +161,7 @@ label{
     body {
         display: block;
         text-align: center;
-        background-color: #0084ff;
+        background-color: darkblue;
         margin: auto;
         align-items: center;
         justify-content: center;
