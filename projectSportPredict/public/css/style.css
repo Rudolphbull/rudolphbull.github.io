@@ -1,0 +1,349 @@
+***{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.html {
+    background-color: silver;
+    background-image: -webkit-linear-gradient(65deg, goldenrod 50%, silver 50%);
+    min-height: 1000px;
+    font-family: "helvetica neue";
+    }
+
+body{
+    /* background-color: silver; */
+    text-align: center;
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1rem;
+    font-size: 2rem;
+    color: goldenrod;
+    
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: darkgreen;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 0.8rem;
+    color: darkgreen;
+
+}
+
+p {
+    font-size: 1.2rem;
+    font-family: 'Merriweather', serif;;
+}
+
+a{
+    text-decoration: none;
+    transition: 0.5s ease;
+    color: darkgreen;
+}
+
+a:hover {
+    color: darkorange;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 1px solid;
+}
+
+ul>li {
+    background-color: #fff;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+td {
+    text-align: center;
+}
+
+div.middle-main {
+    max-width: 900px;
+    border: 1px solid darkgreen;
+    background-color: #efefef33;
+    padding: 15px;
+    overflow: auto;
+    margin: auto;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    font-size: 15px;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+table>thead {
+    background-color: darkgreen;
+    color: white;
+}
+
+table>thead th {
+    padding: 15px;
+}
+
+table th, table td {
+    border: 1px solid#00000017;
+    padding: 10px,15px;
+}
+
+#color {
+    color: darkorange;
+}
+
+table>tbody>tr {
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+table>tfoot>tr {
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+table>tbody>tr:nth-child(even) {
+    background-color: rgb(238,238,238);
+
+}
+
+table>tbody>tr:hover {
+    filter: drop-shadow(0px,2px,6px#002);
+}
+
+div.winning-images img {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-wrap: row;
+    margin: auto;
+    justify-items: center;
+}
+
+#sec-photo {
+    width: 10em;
+    height: 10em;
+    margin-left: 400px;
+    margin-top: -213px;
+}
+
+#first-photo {
+    width: 10em;
+    height: 10em;
+    margin-left: 800px;
+    
+}
+
+#third-photo {
+    width: 10em;
+    height: 10em;
+    margin-left: 600px;
+    margin-top: -211px;
+}
+
+
+
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container{
+    /*======Remove this Background color background-color: deeppink; =========*/
+    float: right;
+    height: 25px;
+    width: 40px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.welcome {
+    color: goldenrod;
+    /*margin-left: 40em;*/
+    font-family: 'Poppins', sans-serif;
+}
+
+.menulogo{
+    height: 3px;
+    width: 30px;
+    background-color: snow;
+}
+
+.menu{
+    /*=========background-color: deeppink;========used to spot the menu slot======*/
+    width: 50%;
+    height: 100vh;
+    background-color: goldenrod;
+    padding: 50px;
+    transform: translateX(-500px); /*============was to hide the menu list.........first set to zero to view menu list======*/
+    transition: 0.5s; /*======Time it takes to show Menu========*/
+}
+
+.menu>li {
+    list-style-type: none;
+    border-bottom: 1px solid rgb(21, 71, 52);
+    padding: 30px 0;
+    text-align: center;
+}
+
+/*==========showmenu hamburger styling i suspectt say na inside javascipt him go run na...lets see========*/
+
+.showmenu {
+    transform: translateX(0);
+}
+
+.menu>li:last-child {
+    border-bottom: none;
+}
+
+.menu>li>:first-child a {
+    font-weight: bold;
+}
+
+.menu>li>a {
+    /* color: snow; */
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    transition: font-weight 0.2s;
+}
+
+.menu>li>a:hover {
+    font-weight: bold;
+}
+
+@media only screen and (min-width:1000px){
+    .menu {
+        width: 500px;
+        display: block;
+    }
+}
+
+@media only screen and (max-width:430px){
+    .menu>li>a {
+        font-size: 16px;
+        display: block;
+    }
+}
+
+div.top-nav {
+    margin: 0;
+    top: 0;
+    text-align: left;
+    color: darkgreen;
+    
+}
+
+#prof {
+    color: goldenrod;
+}
+
+#copyright {
+    font-size: 12px;
+    color: silver;
+}
+
+#congrat {
+    color: darkorange;
+}
+
+
+/*=========Media Screen Sizing For Tablets ============*/
+
+
+@media screen and (min-width: 700px) {
+
+    div.winning-images {
+        margin-left: -350px;    
+    }
+}
+
+/*=========Media Screen Sizing For PC ============*/
+
+@media screen and (min-width: 900px) {
+
+    div.winning-images {
+        margin-left: -20px;    
+    }
+}
+
+#heading {
+    background-color: goldenrod;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    }
+
+.box {
+    max-width: 400px;
+    margin: 80px auto;
+    background: silver;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+    }
+
+#input{
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+    }
+        
+#input:focus {
+outline: none;
+box-shadow: inset 0 -3px 0 0 goldenrod;
+}
+
+.details {
+    display: block;
+    color: darkgreen;
+}
+
+
+.button {
+    padding: 10px 0;
+    /* margin-top: 10px; */
+    margin: auto;
+    height: 100%;
+    width: 50%;
+    /* outline: none; */
+    color: #fff;
+    border:none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(135deg, goldenrod, silver);
+    }
+
+    .button input:hover{
+        background: linear-gradient(-135deg, goldenrod, silver);
+        cursor: pointer;
+    }

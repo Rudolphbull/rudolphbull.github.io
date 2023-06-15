@@ -1,0 +1,24 @@
+<%- include("header") %>
+
+<div class="top-nav">
+    <!-- <p><span id="prof">Prof</span>Predict</p> -->
+    <p><img src="public/image/pplogo.jpg" width="75" height="75"></a></p>
+</div>
+<div class="top-main"> 
+    <div class="container">
+        <h1 class="display-4">Uh Oh!</h1>
+        <p class="lead">There was a problem signing you up. please try again, or contact the developer.</p>
+
+        <form action="/failure" method="post">
+            <button class="btn btn-lg btn-warning" type="submit" name="button">Try Again</button>
+        </form>
+
+
+
+
+
+    </div>
+    <p> <a href="/signup">Try again</a></p>
+</div>
+
+<%- include("footer") %>
